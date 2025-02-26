@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application form</title>
+</head>
+<body >
+    <h1>Job Seekers Application</h1>
+    <hr>
+    <form action="" method="post">
+        <!-- name -->
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" placeholder="enter first name" name="name">&nbsp;
+        <input type="text" id="name" placeholder="enter last name" name="name"><br><br>
+
+        <!-- email -->
+         <label for="email">Email:</label><br>
+         <input type="email" id="email" placeholder="enter your email" name="email"><br><br>
+
+        <!-- address -->
+        <label for="Address">Address:</label><br>
+        <input type="text" id="Address" placeholder="present address" name="Address1"><br><br>
+        <input type="text" id="Address" placeholder="perment address" name="Address2"><br><br>
+        <input type="text" id="Address" placeholder="city" name="city">&nbsp;
+        <input type="text" id="Address" placeholder="State" name="State">&nbsp;
+        <input type="numbers" id="Address" placeholder="pin code" name="pincode"><br><br>
+
+        <!-- Drop dowm -->
+         <label for="State">Residential state:</label><br>
+         <select name="State" id="State">
+            <option value="" selected disabled >please select </option>
+            <option value="Andhra pradesh">Andhra pradesh</option>
+            <option value="Telangana">Telangana</option>
+            <option value="Maharastra">Maharastra</option>
+            <option value="Gujarat">Gujarat</option>
+            <option value="Tamil Nadu">Tamil Nadu</option>
+         </select><br><br>
+
+         <!-- phone number -->
+          <label for="phone number">Phone number:</label>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <label for="Alternatiive number">Alternative number:</label><br>
+
+          <input type="number" id="phone number" placeholder="0000-000-000" name="phone number">
+          &nbsp;
+          <input type="number" id="Alternative number" placeholder="0000-000-000" name="Alternative number"><br> <br>
+
+          <!-- gender -->
+          <label>Gender:</label><br>
+          <input type="radio" id="male" name="gender" value="male">
+          <label for="male">Male</label>&nbsp;
+          <input type="radio" id="female" name="gender" value="female">
+          <label for="female">Female</label><br><br>
+
+          <!-- job role -->
+           <label for="role">Position for which applying for:</label><br>
+           <select name="job role" id="role">
+            <option value="software Associate">software Associate</option>
+            <option value="Testing">Testing</option>
+            <option value="Devops">Devops</option>
+            <option value="Data Analyst">Data Analyst</option>
+           </select><br><br>
+
+           <!-- other role -->
+
+        <label for="others">If other,kindly specify:</label><br>
+        <input type="text" id="others" name="role"><br><br>
+
+        <!-- working mode -->
+         <label for="mode">Preffered working mode:</label>
+         <select name="mode of working" id="mode">
+            <option value="" selected diabled>please select</option>
+            <option value="Online">Online</option>
+            <option value="Offline">Offline</option>
+         </select><br><br>
+
+         <!-- previous working -->
+          <label for="working">Have u Previously worked:</label>
+          <select name="working history" id="working">
+            <option value="" select disabled>please select</option>
+            <option value="Yes">yes</option>
+            <option value="No">No</option>
+          </select><br><br>
+
+          <!-- working period -->
+          <label for="date">if so when:</label><br>
+          
+          <input type="date" id="date" placeholder="day" name="date"><br><br>
+
+          <!-- submit button -->
+          <label for="submit">Click to submit:</label><br>
+          <input type="submit" id="submit" name="submit">
+          
+
+
+
+
+    </form>
+</body>
+</html>
