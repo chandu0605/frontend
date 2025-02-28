@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- internal style sheet -->
+     <style>
+        h2{
+            background-color: aqua;
+        }
+        .example{
+            color:blue;
+        }
+        #example{
+            color:aqua;
+        }
+        *{
+            font-style: inherit;
+        }
+        div h1{
+            background-color: orange;
+        }
+        ol>li{
+            font-weight: bold;
+        }
+        input[type="text"]{
+            border:1px solid green;
+
+        }
+        h1,h2,h3{
+            font-size:50px;
+        }
+     </style>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- line stylesheet -->
+     <h2 style="color:green">hello</h2>
+     <p class="example">class selector</p>
+     <p id="example">id selector</p>
+        <p>universal selector</p>
+     <div>
+        <h1>this is descendent selector</h1>
+     </div>
+     <ol>
+        <li>this is child selector</li>
+     </ol>
+       <input type="text" placeholder="enter">
+        <h3>this is group selector</h3>
+</body>
+</html>
