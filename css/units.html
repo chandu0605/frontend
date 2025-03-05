@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        body{
+         body{
             background-color: aqua;
             font-size: 50px;
             color: purple;
@@ -24,6 +24,30 @@
                 background-color: blue;
                 font-size:100px;
                 color:white;
+            }
+        } 
+
+         @media(orientation:landscape){
+            body{
+                background-color:black;
+                color:white;
+                font-size:15px;
+            }
+        }
+
+        @media(orientation:portrait){
+            body{
+                background-color:yellow;
+                color:brown;
+                font-size:4px;
+            }
+        } 
+
+        @media(min-width:300px) and (max-width:900px) and (orientation:landscape){
+            body{
+                background-color:yellow;
+                color:orange;
+                font-size:30px;
             }
         }
     </style>
