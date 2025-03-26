@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //closure
+        function outerFunction(){
+            let counter = 0;
+            function innerFunction(){
+                counter++;
+                return counter+=counter;
+            }
+            return innerFunction;
+        }
+
+        const incrementFunction=outerFunction();
+        console.log(incrementFunction());
+        console.log(incrementFunction());
+        console.log(incrementFunction());
+        console.log(incrementFunction());
+        
+        //prototypal
+
+        let mobile={
+            audio:"songs"
+        };
+
+        let Samsung = {
+            video:"movies"
+        };
+
+        Samsung.__proto__=mobile;
+        console.log(Samsung.audio);
+        console.log(Samsung.video);
+
+        //method in objects
+
+        let book ={
+            author:"Someone",
+            read(){
+                console.log("we can read books")
+            }
+        };
+
+        let content={
+            gnere:"story",
+            __proto__:book
+        };
+
+        let lesson = {
+            chapter:1,
+            __proto__:content
+        };
+
+        lesson.read();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

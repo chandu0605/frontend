@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .model{
+            width:200px;
+            height:200px;
+            background:linear-gradient(45deg,red,yellow,lightgreen);
+            padding: 50px;
+        }
+
+        .box{
+            width:200px;
+            height:200px;
+            background:radial-gradient(circle,orange,white,blue);
+            padding: 50px;
+            margin-bottom: 20px;
+        }
+
+        .cone{
+            height:200px;
+            width:200px;
+            background: conic-gradient(pink,aqua,blueviolet);
+        }
+
+        .box2{
+            height:200px;
+            width:200ppx;
+            background-color:lightgreen;
+            border:2px solid green;
+            transition: background-color 2s ease 5s;border-radius: 30px;
+        }
+
+        .box2:hover{
+            background-color:orange;
+            height:500px;
+            width:500px;
+            border:20px solid red;
+            border-radius: 25px;
+        }
+
+        .box3{
+            height:50px;
+            width:50px;
+            background-color:lightgreen;
+            border:2px solid green;
+            transition: transform 0.5s ease ,border-radius 1s;
+        }
+
+        .box3:hover{
+            background-color:orange;
+            transform:scale(0.5) rotate(45deg),translate(300px,10px);
+            border:20px solid red;
+            border-radius: 25px;
+        }
+    </style>
+</head>
+<body>
+    <div class="model"></div>
+    <div class="box"></div>
+    <div class="cone"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+</body>
+</html>

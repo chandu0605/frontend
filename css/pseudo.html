@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        html{
+            font-style: normal;
+        }
         button{
             
             font-size:20px;
@@ -49,6 +52,43 @@
         ul{
             background-color: yellow;
         }
+
+        h1::after{
+            content:"😊"
+        }
+
+        h1::before{
+            content:"😘"
+        }
+
+        h2::first-letter{
+            font-size: 40px;
+        }
+
+        h3::first-line{
+            background-color: green;
+        }
+
+        ::selection {
+            background-color: aqua;
+            color: blue;
+            text-shadow: 1px 0px 0px black; /* Simulates a slight italic effect */
+        }
+
+        .box{
+            height:100px;
+            width:200px;
+            padding:20px;
+            margin:20px;
+            border:2px solid red;
+            font-size:10px;
+            background-color:aqua
+
+        }
+
+        .shadows{
+            box-shadow: inset 5px 5px 10px 10px red ;
+        }
     </style>
 </head>
 <body>
@@ -66,5 +106,14 @@
     
     
    </ul>
+
+   <h1>welcome to css</h1>
+   <h2>this first letter</h2>
+   <h3>this is first line <br>second line 
+   </h3>
+   <h4>this is last letter</h4>
+   <h5>this is last line <br> this 2nd last line</h5>
+
+   <div class="box shadows"><h1>this is shadow color</h1></div>
 </body>
 </html>

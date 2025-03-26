@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        body{
+            height:200vh;
+            background-color: aqua;
+        }
+        .parent{
+            height:600px;
+            width:600px;
+            background-color: lightgrey;
+            position:relative;
+        }
+
+        .box{
+            height:200px;
+            width:200px;
+            background-color: lightgreen;
+            position: absolute;
+            left : 200px;
+            top:200px;
+            
+        }
+
+        .box2{
+            height:200px;
+            width:200px;
+            color:white;
+            background-color: red;
+            position: fixed;
+            top:100px;
+            left:60%;
+        }
+
+        .box3{
+            height:200px;
+            width:200px;
+            color:white;
+            background-color: brown;
+            position:sticky;
+            top:70%;
+        }
+      
+    </style>
+</head>
+<body>
+    <div class="parent">parent element
+        <div class="box">div element</div>
+    </div>
+    <div class="box2">fixed position</div>
+    <div class="box3">sticky position</div>
+</body>
+</html>
