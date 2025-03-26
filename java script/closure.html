@@ -55,6 +55,33 @@
         };
 
         lesson.read();
+
+        //call(),apply(),bind()
+
+        let print1 = {
+            company:"hp",
+            model:"gt13"
+        };
+
+        let print2 = {
+            company:"dell",
+            model:"rew"
+        }
+
+        function printcsn(paper1,paper2){
+            console.log(paper1+" is best quality for "+this.company+" we can get color print also with "+this.model + " "+paper2);
+        }
+
+        var printfun1 = printcsn.bind(print1);
+        var printfun2 = printcsn.bind(print2);
+
+        printfun1("A4 paper","good result");
+        printfun2("A1 paper","better result");
+
+        //below 2 are using without bind
+        
+        //printcsn.call(print1,"A4 paper","good result");
+        //printcsn.call(print2,"A1 paper","better result");
     </script>
 </head>
 <body>
