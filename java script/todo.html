@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>To Add the todo item in li</h1>
+    <input type="text" placeholder="Enter item" id="itemInput" value="item">
+    <button id="addItemButton">Add item</button>
+    <button id="saveButton">Save</button>
+    
+
+    <ul id="itemList">
+        
+    </ul>
+
+    <script>
+        let inputEle =document.getElementById('itemInput')
+        let buttonEle =document.getElementById('addItemButton')
+        let ulEle =document.getElementById('itemList')
+        
+
+        buttonEle.addEventListener("click",()=>{
+            if(inputEle.value !== ""){
+                let liEle = document.createElement("li")
+                liEle.textContent = inputEle.value 
+                ulEle.appendChild(liEle)
+                
+                inputEle.value=""
+                let removeEle = document.createElement('button')
+                removeEle.innerHTML="Delete"
+                liEle.appendChild(removeEle)
+                let editEle = document.createElement('button')
+                editEle.innerHTML="Edit"
+                liEle.appendChild(editEle)
+
+                removeEle.addEventListener("click",()=>{
+                    liEle.remove()
+                })
+
+                editEle.addEventListener("click",()=>{
+                    document.getELementById('itemInput')
+                })
+            }
+        })
+
+        
+
+    </script>
+</body>
+</html>
