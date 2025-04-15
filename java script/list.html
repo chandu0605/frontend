@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=a, initial-scale=1.0">
+    <title>Document</title>
+</head<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    
+    <h1>Product Details</h1>
+    <button id="buttonId">Click On</button>
+    <ul id="unorderListId"></ul>
+    
+
+    <script>
+
+        let buttonElement = document.getElementById('buttonId');
+        let unorderListElement = document.getElementById("unorderListId");
+
+       
+          var productsData = [];
+          let iscondition = false;
+
+          fetch("https://jsonplaceholder.typicode.com/albums")
+            .then(value => {
+                   return value.json(); 
+            })
+           .then(data => {
+                  productsData = data;
+                  console.log("prdouctData",productsData);
+            })
+            .catch(error => {
+                 console.log(error);
+            });
+
+
+              
+            buttonElement.addEventListener("click",()=>{
+                buttonElement.innerHTML = "Go Back";
+                if(!iscondition){
+                  unorderListElement.innerHTML="";
+                  productsData.forEach((obj) => {
+                
+                  let liElement = document.createElement('p');
+                   headingElement = document.createElement('h1');
+                   headingElement.innerHTML = "Title: "+obj.title;
+                   unorderListElement.append(headingElement);
+                   liElement.innerHTML = "userId: "+obj.userId;
+                   unorderListElement.append(liElement);
+                   let ParaElement = document.createElement('p');
+                   ParaElement.innerHTML = "Id: "+obj.Id;
+                   unorderListElement.append(ParaElement);
+                   iscondition = true;
+                  
+                                
+            });
+
+          }
+          else{
+
+               buttonElement.innerHTML = 'Click On';
+              
+
+               unorderListElement.innerHTML =' ';
+
+               iscondition = false;
+
+    
+
+
+}
+
+        })
+    
+   
+  
+
+       
+        
+
+    </script>
+</body>
+</html>
+<body>
+    
+</body>
+</html>

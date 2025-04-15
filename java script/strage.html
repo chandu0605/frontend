@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="inputName">Enter your name:</label>
+    <input type="text" id="inputId" placeholder="Enter your name">
+    <button id="saveId" onclick="save()">Save to local Storage</button>
+    <button id="getId" onclick="get()">Get fromlocal Storage</button>
+    <button id="RemoveId" onclick="dele()">Remove from local Storage</button>
+    <ul id="ulId"></ul>
+    <script>
+        
+        let ulEle = document.getElementById("ulId");
+
+        function save(){
+            let inputEle = document.getElementById("inputId").value;
+            localStorage.setItem("name",inputEle);
+            
+
+        }
+
+        function get(){
+            let getName = localStorage.getItem("name");
+            console.log(getName);
+            let liEle = document.createElement("li");
+            liEle.textContent = getName;
+            ulEle.appendChild(liEle);
+           
+        }
+
+        function dele() {
+            // Get the value before removing it
+            let deletedValue = localStorage.getItem("name");
+
+            // Now remove it from localStorage
+            localStorage.removeItem("name");
+
+            // Create and append the <li> element if the value existed
+            if (deletedValue !== null) {
+            let liEle = document.createElement("li");
+            liEle.textContent = `Deleted: ${deletedValue}`;
+            
+            let ulEle = document.getElementById("myList"); // Assuming there's a <ul id="myList">
+            ulEle.appendChild(liEle);
+            } else {
+            alert("No item named 'name' found in localStorage.");
+            }
+        }
+
+    </script>
+</body>
+</html>

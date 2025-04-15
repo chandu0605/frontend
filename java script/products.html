@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>  
+
+        body{
+            background-color: rgb(224, 236, 0);
+        }
+        div{
+            align-items: center;
+            border: 5px solid rgb(242, 255, 0);
+            margin-top: 150px;
+            padding:10px 10px;
+            background-color: lightblue;
+            border-radius: 20px;
+            color: white;
+            text-align: center;      
+           
+        }  
+        h1{
+            text-shadow: 3px 1px rgb(47, 34, 106);
+            color:red;
+        } 
+
+        ul{
+            
+            padding: 10px 0px;
+
+        }
+
+       li{
+
+            list-style-type: none;
+            display: inline-block;
+            border: 5px solid rgb(95, 95, 95);
+            background-color: lightcoral;
+            text-align: center;
+            margin: 0px 10px;
+            margin-top: 80px;
+            width: 250px;
+            height: 300px;
+            position: relative;
+            color:green;
+            border-radius: 20px;  
+
+            
+        }
+
+        img{
+            width: 100%;
+            height: 95%;
+        }
+
+        li h4,h5{
+            color:aliceblue;
+        }
+
+        img:hover{
+            border-radius: 20px;
+            border-color: white;
+            border:5px solid rgb(255, 255, 255);
+            width: 240px;
+            height: 295px;
+            outline-offset: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="divId">
+        <h1>Products Card </h1>
+       <ul id ="unorderListId">
+           
+        </ul>
+        </div>
+
+          
+    </div>
+
+     
+   <script>
+        let divElement = document.getElementById("divId");
+        let unorderListElement = document.getElementById("unorderListId");
+    
+        let productData = []
+        fetch("https://dummyjson.com/products")
+            .then(value =>{
+                  return value.json()})
+            .then(data => {
+                productData = data.products;
+                productData.forEach(obj => {
+                    let liElement = document.createElement('li');
+                    let imgElement = document.createElement('img');
+                    let titleElement = document.createElement('h4');
+                    let priceElement = document.createElement('h5');
+                    priceElement.textContent = "Price: $"+obj.price;
+                    imgElement.src = obj.images[0];
+                    titleElement.textContent = obj.title;
+                    liElement.appendChild(imgElement);
+                    liElement.appendChild(titleElement);
+                    liElement.appendChild(priceElement);
+                    unorderListElement.appendChild(liElement);
+                    divElement.appendChild(unorderListElement);
+                                        
+                });
+                              
+            })
+            .catch(error => {
+                console.log(error);
+            });
+    </script>     
+</body>
+</html>

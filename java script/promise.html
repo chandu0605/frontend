@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Regular Promise
+
+        let comp = new Promise((resolve,reject) =>{
+           let num = Math.random()
+           console.log(num  )
+           if (num > 0.5){
+            resolve("it is greater than 0.5");
+
+           } else{
+            reject("it less than 0.5")
+           }
+                });
+
+        comp
+        .then((val)=>{console.log(val)})
+        .catch((error) =>{console.log(error)})
+    
+        let promise0 = new Promise((resolve, reject) => {
+    resolve("Bijjam");
+});
+
+let promise1 = new Promise((resolve, reject) => {
+    resolve("Indra");
+});
+
+let promise2 = new Promise((resolve, reject) => {
+    resolve("Sena");
+});
+
+let promise3 = new Promise((resolve, reject) => {
+    resolve("Reddy");
+});
+
+
+
+
+    Promise.all([promise0, promise1, promise2, promise3])
+    .then(results => console.log("All success:", results))
+
+
+    Promise.allSettled([promise0, promise1, promise2, promise3])
+    .then(results => console.log("All success:", results))
+
+
+    Promise.any([promise0, promise1, promise2, promise3])
+    .then(results => console.log("All success:", results))
+
+    Promise.race([promise0, promise1, promise2, promise3])
+    .then(results => console.log("All success:", results))
+    
+    </script>
+</body>
+</html>

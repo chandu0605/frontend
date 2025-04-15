@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function calcul(){
+            let add=0;
+            for(let i=0;i<=100000;i++){
+                add += i;
+                
+            }
+            return add;
+        }
+
+        let start_time = performance.now();
+        console.log(start_time);
+        let end_time = performance.now(calcul());
+        console.log(end_time);
+        let result = end_time-start_time; 
+        console.log(result);
+    </script>
+</body>
+</html>
